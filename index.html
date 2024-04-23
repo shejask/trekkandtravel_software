@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- ======= Styles ====== -->
+     <link rel="stylesheet" href="/assets/styles/style.css">
+         <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon  hidden name="logo-apple"></ion-icon>
+                            <img class="mt-2 ml-4" width="40" src="/assets/imgs/TREKKLOGO.png" alt="">
+                            <!-- <img width="20" src="/assets/imgs/TREKKLOGO.png" alt=""> -->
+                        </span>
+                        <span class="title font-semibold">Trekk & Travels</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Hotel_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hotel Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Transport_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bus-outline"></ion-icon>
+                        </span>
+                        <span class="title">Transport Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Itnery.html">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Itnery</span>
+                    </a>
+                </li>
+
+                
+                <li>
+                    <a href="add_resort.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Resort</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Contacts.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Contacts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Settings.html">
+                        <span class="icon">
+                            <ion-icon name="cog-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div hidden class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!-- <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div> -->
+            </div>
+
+            <!-- ======================= Cards ================== -->
+             
+
+            <!DOCTYPE html>
+<html lang="en">
+ 
+
+ 
+    <div class="max-w-md rounded ml-5  bg-gray-100 mx-auto mt-8">
+        <div class="bg-white p-8 rounded-lg  bg-gray-400 text-white shadow-md text-center sm:text-left">
+            <div class="text-2xl font-bold text-gray-800 mb-4">Hotel Vouchers</div>
+            <div class="text-sm font-semibold text-gray-600 mb-2">No of Vouchers:</div>
+            <span class="text-2xl font-bold text-gray-800 mb-4" id="formdataTotal">Loading...</span>
+
+            <div class="mt-5">
+                <button onclick="window.location.href='Edit_hotel_voucher.html'" class="bg-indigo-500   hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded">
+                    View Vouchers
+                </button>
+                
+             
+            </div>
+        </div>
+    </div>
+
+
+    <div class="max-w-md rounded ml-5  bg-gray-100 mx-auto mt-8">
+        <div class="bg-white p-8 rounded-lg  bg-gray-400 text-white shadow-md text-center sm:text-left">
+            <div class="text-2xl font-bold text-gray-800 mb-4">Transport Voucher</div>
+            <div class="text-sm font-semibold text-gray-600 mb-2">No of Transport Voucher:</div>
+            <span class="text-2xl font-bold text-gray-800 mb-4" id="TransportVoucherTotal">Loading...</span>
+
+            <div class="mt-5">
+                <button onclick="window.location.href='View_transportvoucher.html'"  class="bg-indigo-500   hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded">
+                    View Vouchers
+                </button>
+                
+             
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="max-w-md rounded ml-5 mb-10 bg-gray-100 mx-auto mt-8">
+        <div class="bg-white p-8 rounded-lg  bg-gray-400 text-white shadow-md text-center sm:text-left">
+            <div class="text-2xl font-bold text-gray-800 mb-4">Itnery</div>
+            <div class="text-sm font-semibold text-gray-600 mb-2">No of Itnery:</div>
+            <span class="text-2xl font-bold text-gray-800 mb-4" id="ItneryTotal">Loading...</span>
+
+            <div class="mt-5">
+                <button onclick="window.location.href='view_itnery.html'" class="bg-indigo-500   hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded">
+                    View Vouchers
+                </button>
+                
+             
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="currentDate" hidden></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="/assets/js/index.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

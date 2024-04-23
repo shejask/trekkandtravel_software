@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- ======= Styles ====== -->
+     <link rel="stylesheet" href="/assets/styles/style.css">
+         <script src="https://cdn.tailwindcss.com"></script>
+        
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon  hidden name="logo-apple"></ion-icon>
+                            <img class="mt-2 ml-4" width="40" src="/assets/imgs/TREKKLOGO.png" alt="">
+                            <!-- <img width="20" src="/assets/imgs/TREKKLOGO.png" alt=""> -->
+                        </span>
+                        <span class="title font-semibold">Trekk & Travels</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Hotel_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hotel Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Transport_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bus-outline"></ion-icon>
+                        </span>
+                        <span class="title">Transport Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Itnery.html">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Itnery</span>
+                    </a>
+                </li>
+
+                
+                <li>
+                    <a href="add_resort.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Resort</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Contacts.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Contacts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Settings.html">
+                        <span class="icon">
+                            <ion-icon name="cog-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div hidden class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+
+                <!-- <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div> -->
+            </div>
+
+            <!-- ======================= Cards ================== -->
+             
+ 
+      
+
+     
+
+            <div class="p-4">
+                <h1 class="text-2xl font-bold  mb-4">Create Itinerary</h1>
+
+                <form action="#" method="post" id="package-form"> 
+            
+                <!-- Tour ID Input -->
+                <div class="mb-4">
+                    <label for="tourId" class="block">Tour ID:</label>
+                    <input type="text" id="tourId" readonly name="tourId" placeholder="Enter Tour ID" required
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+            
+                <label for="travelDate" class="block">Travel Date:</label>
+                <input  type="date" id="traveldate"   class="w-full p-2 border rounded border border-slate-700">
+            
+                <div class=" mt-5 flex input-row">
+                    <div class="flex-1 mb-2 lg:mr-2">
+                        <label for="guestName" class="block mb-2">Guest Name:</label>
+                        <input type="text" id="guestName" name="guestName" class="w-full p-2 border rounded border border-slate-700">
+    
+                        <div id="guest-name-dropdown" class="hidden absolute mt-2 bg-white border rounded border-gray-300">
+                            <!-- Dropdown content will be dynamically populated here -->
+                        </div>
+                    </div>
+    
+                    <div class="flex-1 mb-2 lg:mr-2">
+                        <label for="guestNumber" class="block mb-2">Guest Number:</label>
+                        <input type="text" id="guestNumber" name="guestNumber" class="w-full p-2 border rounded border border-slate-700">
+                    </div>
+                </div>
+
+
+
+
+            
+                <div class="mb-4">
+                    <label for="arrival-details" class="block">Arrival Details:</label>
+                    <input type="text" id="arrival-details" class="w-full p-2 border rounded border border-slate-700">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="departure-details" class="block">Departure Details:</label>
+                    <input type="text" id="departure-details" class="w-full p-2 border rounded border border-slate-700">
+                </div>
+            
+                <div class="mb-4">
+                    <label for="number-of-pax" class="block">Number of Pax:</label>
+                    <input type="number" id="number-of-pax" min="1" class="w-full p-2 border rounded border border-slate-700">
+                </div>
+            
+              <!-- ///////////////////////////////
+              ///////////////////////////
+                  TOUR HIGHLIGTS
+              ///////////////////////////////
+              /////////////////////////// -->
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+            
+                <div class="mb-4">
+                    <label for="tour-highlights" class="block">Tour Highlights:</label>
+                    <input type="text" hidden id="tourHighlight" name="tourHighlight" placeholder="Enter tour highlights" class="w-full p-2 border rounded border border-slate-700">
+                    <div id="tourhighlightsdropdown" class="mt-2"></div>
+                </div>
+
+
+                  <!-- Container for dynamically added tour highlight fields -->
+        <div id="tourHighlightsContainer" class="mt-4"></div>
+
+
+               
+             
+                <button type="button" id="addTourHighlight" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add</button>
+
+                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                            <!-- ///////////////////////////////
+              ///////////////////////////
+            
+              ///////////////////////////////
+              /////////////////////////// -->
+
+            
+
+                    
+                <!-- Package Description -->
+                <div class="mb-4">
+                    <label for="heading" class="block">Heading</label>
+                    <input type="text" id="heading" placeholder="Enter tour heading"
+                    class="w-full p-2 border rounded border border-slate-700">
+  
+                    <label for="package-description" class="mt-5 block">Description</label>
+                    <textarea id="anytext-description" placeholder="Enter Anything..."  name="package-description"
+                    class="w-full p-2 border rounded border border-slate-700"></textarea>
+                </div>
+ 
+            
+               
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
+                        <!-- Package Name -->
+                        <div class="mb-4 ">
+                            <label for="packageName" class="block">Package Name:</label>
+                            <input type="text" id="packageName" name="packageName"
+                            class="w-full p-2 border rounded border border-slate-700" required>
+                            <div hidden  id="allpackage-name"></div>
+                        </div>
+            
+                      
+            
+                        <!-- Package Description -->
+                        <div class="mb-4">
+                            <label for="description" class="block">Description</label>
+                            <textarea id="description" name="description"
+                            class="w-full p-2 border rounded border border-slate-700"></textarea>
+                        </div>
+              
+
+                        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+
+                 <label for="duration" class="block font-semibold text-xl">Duration:</label>
+
+                <label for="duration" class="block">No of Days:</label>
+                <select id="duration" name="duration" class="w-full p-2 border rounded border border-slate-700">
+                    <option value="0">Choose Days</option>
+                    <option value="1">Day 1</option>
+                    <option value="2">Day 2</option>
+                    <option value="3">Day 3</option>
+                    <option value="4">Day 4</option>
+                    <option value="5">Day 5</option>
+                    <option value="6">Day 6</option>
+                    <option value="7">Day 7</option>
+                    <option value="8">Day 8</option>
+                    <option value="9">Day 9</option>
+                    <option value="10">Day 10</option>
+                    <option value="11">Day 11</option>
+                    <option value="12">Day 12</option>
+                    <option value="13">Day 13</option>
+                    <option value="14">Day 14</option>
+                    <option value="15">Day 15</option>
+                    <option value="16">Day 16</option>
+                    <option value="17">Day 17</option>
+                    <option value="18">Day 18</option>
+                    <option value="19">Day 19</option>
+                    <option value="20">Day 20</option>
+                    <option value="21">Day 21</option>
+                    <option value="22">Day 22</option>
+                    <option value="23">Day 23</option>
+                    <option value="24">Day 24</option>
+                    <option value="25">Day 25</option>
+                    <option value="26">Day 26</option>
+                    <option value="27">Day 27</option>
+                    <option value="28">Day 28</option>
+                    <option value="29">Day 29</option>
+                    <option value="30">Day 30</option>
+                    
+                    
+
+                </select>
+
+                <label for="night" class="block mt-8">No of Nights:</label>
+                <select id="night" name="night" class="w-full p-2 border rounded border border-slate-700">
+                    <option value="0">Choose Nights</option> 
+                    <option value="1">1 Night</option>
+                    <option value="2">2 Nights</option>
+                    <option value="3">3 Nights</option>
+                    <option value="4">4 Nights</option>
+                    <option value="5">5 Nights</option>
+                    <option value="6">6 Nights</option>
+                    <option value="7">7 Nights</option>
+                    <option value="8">8 Nights</option>
+                    <option value="9">9 Nights</option>
+                    <option value="10">10 Nights</option>
+                    <option value="11">11 Nights</option>
+                    <option value="12">12 Nights</option>
+                    <option value="13">13 Nights</option>
+                    <option value="14">14 Nights</option>
+                    <option value="15">15 Nights</option>
+                    <option value="16">16 Nights</option>
+                    <option value="17">17 Nights</option>
+                    <option value="18">18 Nights</option>
+                    <option value="19">19 Nights</option>
+                    <option value="20">20 Nights</option>
+                    <option value="21">21 Nights</option>
+                    <option value="22">22 Nights</option>
+                    <option value="23">23 Nights</option>
+                    <option value="24">24 Nights</option>
+                    <option value="25">25 Nights</option>
+                    <option value="26">26 Nights</option>
+                    <option value="27">27 Nights</option>
+                    <option value="28">28 Nights</option>
+                    <option value="29">29 Nights</option>
+                    <option value="20">30 Nights</option>
+                </select>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+            
+                <!-- <div id="package-details-container" class="mb-4"></div> -->
+
+                <div id="formContainer"></div>
+                
+                <p class="font-bold  ">Click To Load Images</p>
+                <button type="button" id="newSaveBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 " >Load Image</button>
+
+                <hr class="h-px my-8 bg-red-200 border-0 dark:bg-gray-700">
+
+
+
+      
+                <div class="mb-4">
+                    <label for="amount-details" class="block">Amount:</label>
+                    <input type="text" id="amount-details" class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+            
+                <table id="originalTable" class="mb-4">
+                    <thead>
+                        <tr>
+                            <th>Check-in</th>
+                            <th>Check-out</th>
+                            <th>Destination</th>
+                            <th>Hotel</th>
+                            <th>Number of Rooms</th>
+                            <th>Matters</th>
+                            <th>Meal Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="row1">
+                            <td><input type="date" class="w-full p-2 border rounded border border-slate-700"></td>
+                            <td><input type="date" class="w-full p-2 border rounded border border-slate-700"></td>
+                            <td><input type="text" class="w-full p-2 border rounded border border-slate-700"></td>
+                            <td><input type="text" class="w-full p-2 border rounded border border-slate-700"></td>
+                            <td><input type="text" class="w-full p-2 border rounded border border-slate-700"></td>
+                            <td><input type="text" class="w-full p-2 border rounded border border-slate-700"></td>
+                            <td><input type="text" class="w-full p-2 border rounded border border-slate-700"></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                    
+                </table>
+                <button type="button" id="addRowBtn"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 mb-4">Add Row</button>
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+
+                <button type="button" id="addOptionBtn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 mb-4">Add New Option</button>
+        
+                 
+                <h2 id="optionTitle" class="hidden mb-4">Option 1</h2>
+
+                <div class="alloptions">
+                    <!-- Options will be dynamically added here -->
+                  </div>
+               
+
+                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+            
+                    <div class="w-full p-2 border rounded border border-slate-700smb-4">
+                        <h1 class="text-2xl font-bold">TOUR INCLUSIONS</h1>
+                    
+                        <div class="mb-4">
+                            <textarea id="personal-nature" rows="4"
+                                class="w-full h-10 p-2 border rounded border border-slate-700">Accommodation at mentioned hotels </textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="applicable-taxes" rows="4"
+                                class="w-full p-2 h-10 border rounded border border-slate-700">All presently applicable taxes</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="transfers-sightseeing" rows="4"
+                                class="w-full p-2 h-10 border rounded border border-slate-700">Transfers / Sightseeing’s / Excursions by Air Conditioned Transportation on Private basis () as per itinerary</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="driver-allowances" rows="4"
+                                class="w-full p-2 h-10 border rounded border border-slate-700">Driver allowances, Petrol/Gas cost, Toll Tax, Parking and Vehicle Insurance</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="govt-taxes" rows="4"
+                                class="w-full p-2 border h-10 rounded border border-slate-700">All currently applicable Govt Service Taxes</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="customer-support" rows="4"
+                                class="w-full p-2 border h-10 rounded border border-slate-700">24 x 7 customer support</textarea>
+                        </div>
+                    
+                        <div id="tour-inclusions-container" class="mb-4"></div>
+                        <button type="button" id="addMoree"
+                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add More</button>
+                    </div>
+
+                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                    
+                     <div class="mb-4 mt-5">
+                        <h1 class="text-2xl font-bold">TOUR EXCLUSIONS</h1>
+                    
+                        <div class="mb-4">
+                            <textarea id="field-one" rows="4" class="w-full h-10 p-2 border rounded border border-slate-700">Items of personal nature, such as, laundry, telephone calls, alcoholic beverages, minibar charges, etc.</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="field-two" rows="4"
+                                class="w-full h-10 p-2 border rounded border border-slate-700">Meals other than those specified as per itinerary</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="field-three" rows="4"
+                                class="w-full h-10 p-2 border rounded border border-slate-700">Monuments Entrance on spot payment subject to monument visits</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="field-four" rows="4"
+                                class="w-full h-10 p-2 border rounded border border-slate-700">Any tours not specified within the above itinerary</textarea>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <textarea id="field-five" rows="4"
+                                class="w-full h-10 p-2 border rounded border border-slate-700">Tipping for Tour Guide, Driver, etc. – client’s own discretion</textarea>
+                        </div>
+                    
+                        <div id="tour-exclusions-container" class="mb-4"></div>
+                        <button type="button" id="addMoreexclusions"
+                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add More</button>
+                    </div>
+
+                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                    
+                    <div class="mb-4">
+                        <label for="notes" class="block">Notes:</label>
+                        <input type="text" id="notes" name="notes" value="No bookings on hold and bookings are subject to availability"
+                            required class="w-full p-2 border rounded border border-slate-700">
+                    </div>
+                    
+                    <div id="notes-container" class="mb-4"></div>
+                    <button type="button" id="add-notes" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add Notes</button>
+
+                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                    
+                    <div class="mb-4">
+                        <label for="cancellation-policy" class="block mt-5">Cancellation Policy:</label>
+                        <div id="cancellation-notes-container" class="mb-4"></div>
+                        <button type="button" id="addCancellationNote" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">+ Add Cancellation Policy</button>
+                    </div>
+
+                    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                    
+                    <div class="mb-4 mt-5">
+                        <label for="tour-executive" class="block">Tour Executive :</label>
+                        <input type="text" id="tour-executive" min="1" class="w-full p-2 border rounded border border-slate-700">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="tour-contact" class="block">Contact no :</label>
+                        <input type="text" id="tour-contact" min="1" class="w-full p-2 border rounded border border-slate-700">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="tour-mail" class="block">Mail Id :</label>
+                        <input type="text" id="tour-mail" min="1" class="w-full p-2 border rounded border border-slate-700">
+                    </div>
+                    </div>
+
+                    
+                    <!-- <button type="submit"id="newSaveBtn" class="bg-red-500 ml-5 text-white px-4 py-2 rounded hover:bg-red-700">Load Image</button>
+
+                    <button type="submit" id="savedata" class="bg-green-500 ml-5 text-white px-4 py-2 rounded hover:bg-green-700">Save</button>
+                    
+                    <button type="button" id="printButton" class="bg-blue-500 ml-5 mb-5 text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Print</button> -->
+
+                    <!-- <button type="button"  id="submitBtn"   class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-green-700">Save</button> -->
+ 
+
+                    <!-- <div class=" mt-1 flex input-row">
+                        <div class="flex-2 mb-2 ml-5   lg:mr-2">
+                              <p class="font-bold  ">Click To Load Images</p>
+                             <button type="button" id="newSaveBtn" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-900 " >new save</button>
+
+                        </div> -->
+        
+                      
+                            <button type="submit" id="savedata" class="bg-green-500 ml-5 text-white px-4 py-2 rounded hover:bg-green-700">Save All</button>
+                            <p class="text-xs ml-5 text-red-500">* Confirm that The Images are Loaded</p>
+                          
+                            <button type="button"  id="printButton"   class="bg-indigo-700 text-white ml-5 mt-5 mb-5  px-4 py-2 rounded hover:bg-indigo-500">Print</button>
+ 
+                       
+                             
+                       
+                            
+                    
+
+                    </form>
+                    
+            
+
+  
+
+ 
+
+
+    <!-- =========== Scripts =========  -->
+    <script type="module" src="/assets/js/itnery.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

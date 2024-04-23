@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- ======= Styles ====== -->
+     <link rel="stylesheet" href="/assets/styles/style.css">
+         <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon  hidden name="logo-apple"></ion-icon>
+                            <img class="mt-2 ml-4" width="40" src="/assets/imgs/TREKKLOGO.png" alt="">
+                            <!-- <img width="20" src="/assets/imgs/TREKKLOGO.png" alt=""> -->
+                        </span>
+                        <span class="title font-semibold">Trekk & Travels</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Hotel_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hotel Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Transport_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bus-outline"></ion-icon>
+                        </span>
+                        <span class="title">Transport Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Itnery.html">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Itnery</span>
+                    </a>
+                </li>
+
+                
+                <li>
+                    <a href="add_resort.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Resort</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Contacts.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Contacts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Settings.html">
+                        <span class="icon">
+                            <ion-icon name="cog-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      <!-- ========================= Main ==================== -->
+      <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <div hidden class="search">
+                <label>
+                    <input type="text" placeholder="Search here">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+
+            <!-- <div class="user">
+                <img src="assets/imgs/customer01.jpg" alt="">
+            </div> -->
+        </div>
+            <!-- ======================= Cards ================== -->
+         
+
+          
+    <div class="container mx-auto">
+        <h1 class="text-xl font-bold mb-4 ml-4 mt-5 md:ml-8 md:mt-10">Create and Manage Hotels</h1>
+
+        <!-- Vouchers Form -->
+        <form id="voucher-form" class="bg-neutral-300  lg:bg-white md:bg-white  p-4 rounded-lg shadow-md mb-4 md:ml-5   md:w-1/2 md:mx-auto">
+
+            <div class="mb-4">
+                <label for="hotel-name" class="block font-medium">Hotel Name:</label>
+                <input type="text" id="hotel-name" required
+                    class="w-full md:w-96 p-2 border rounded border border-slate-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="hotel-address" class="block font-medium">Hotel Address:</label>
+                <input type="text" id="hotel-address" required
+                    class="w-full md:w-96 p-2 border rounded border border-slate-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="google-map-link" class="block font-medium">Google Map Link:</label>
+                <input type="text" id="google-map-link" class="w-full md:w-96 p-2 border rounded border-2 border-slate-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="hotel-phone" class="block font-medium">Hotel Phone:</label>
+                <input type="tel" id="hotel-phone" required
+                    class="w-full md:w-96 p-2 rounded border border-slate-700">
+            </div>
+
+            <!-- Inside the form, add the following code for "Terms & Condition" -->
+            <div class="mb-4">
+                <label for="terms-container" class="block">Terms & Condition:</label>
+                <div id="terms-container" class="mb-2">
+                    <input type="text" placeholder="Enter terms & condition"
+                        class="w-full md:w-96 p-2 rounded border border-slate-700 terms-condition-input">
+                </div>
+                <button type="button" id="add-terms-button"
+                    class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add +</button>
+            </div>
+
+            <!-- Cancellation Policy -->
+            <div class="mb-4">
+                <label for="cancellation-container" class="block">Cancellation Policy:</label>
+                <div id="cancellation-container" class="mb-2">
+                    <input type="text" placeholder="Enter cancellation policy"
+                        class="w-full md:w-96 p-2 rounded border border-slate-700 cancellation-policy-input">
+                </div>
+                <button type="button" id="add-cancellation-button"
+                    class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add +</button>
+            </div>
+
+            <div class="mb-4">
+                <label for="hotel-photo" class="block font-medium">Upload Hotel Photo:</label>
+                <input class="relative m-0 block w-full md:w-96 min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] font-normal leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-500 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                    id="hotel-photo" accept="image/*" type="file" />
+            </div>
+
+            <button type="submit"
+                class="bg-indigo-800 text-white py-2 px-4 mt-5 rounded hover:bg-indigo-500">Create Voucher</button>
+        </form>
+
+        <!-- Edit Voucher Form -->
+        <form id="edit-form" style="display: none"
+            class="bg-white p-4 rounded-lg shadow-md mb-4 md:ml-8 md:mt-10 md:w-96 md:mx-auto">
+
+            <div class="mb-4">
+                <label for="edit-hotel-name" class="block font-medium">Edit Hotel Name:</label>
+                <input type="text" id="edit-hotel-name" required
+                    class="w-full md:w-96 p-2 rounded border border-slate-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="edit-hotel-address" class="block font-medium">Edit Hotel Address:</label>
+                <input type="text" id="edit-hotel-address" required
+                    class="w-full md:w-96 p-2 border rounded rounded border border-slate-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="edit-google-map-link" class="block font-medium">Edit Google Map Link:</label>
+                <input type="text" id="edit-google-map-link"
+                    class="w-full md:w-96 p-2 rounded border border-slate-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="edit-hotel-phone" class="block font-medium">Edit Hotel Phone:</label>
+                <input type="tel" id="edit-hotel-phone" required
+                    class="w-full md:w-96 p-2 rounded border border-slate-700">
+            </div>
+
+            <div class="mb-4">
+                <label for="edit-hotel-photo" class="block font-medium">Change Hotel Photo:</label>
+                <input
+                    class="relative m-0 block w-full md:w-96 min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] font-normal leading-[2.15] text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-500 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                    id="edit-hotel-photo" accept="image/*" type="file" />
+            </div>
+
+            <!-- Add Terms and Conditions input fields -->
+            <div class="mb-4">
+                <label for="edit-terms" class="block font-medium">Edit Terms & Conditions:</label>
+                <input type="text" id="edit-terms" class="w-full md:w-96 p-2 rounded border border-slate-700">
+            </div>
+
+            <!-- Add Cancellation Policy input fields -->
+            <div class="mb-4">
+                <label for="edit-cancellation-policy" class="block font-medium">Edit Cancellation Policy:</label>
+                <input type="text" id="edit-cancellation-policy"
+                    class="w-full md:w-96 p-2 rounded border border-slate-700">
+            </div>
+
+            <button type="submit"
+                class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-800">Save Changes</button>
+        </form>
+
+        <!-- Vouchers Container -->
+        <div id="vouchers-container" class="space-y-4   md:ml-8 md:w-96 md:mt-10 md:mx-auto">
+            <!-- Vouchers will be displayed here -->
+        </div>
+
+        <form id="guest-form" hidden
+            class="bg-white p-4 rounded-lg shadow-md mb-4 md:w-96 md:mx-auto">
+
+            <div class="mb-4">
+                <label for="guest-name" class="block">Guest Name:</label>
+                <input type="text" id="guest-name" required class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="contact-number" class="block">Contact Number:</label>
+                <input type="tel" id="contact-number" required class="w-full p-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="citizen" class="block">Citizen:</label>
+                <input type="text" id="citizen" required class="w-full p-2 border rounded">
+            </div>
+
+            <button type="submit"
+                class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add Guest</button>
+        </form>
+
+        <div id="guests-container" hidden class="space-y-4">
+            <!-- Guests will be displayed here -->
+        </div>
+    </div>
+    <!-- =========== Scripts =========  -->
+    <script type="module" src="/assets/js/add_resort.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

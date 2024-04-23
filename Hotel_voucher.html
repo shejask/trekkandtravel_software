@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- ======= Styles ====== -->
+     <link rel="stylesheet" href="/assets/styles/style.css">
+         <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+         .body{
+             font-family: 'Manrope', sans-serif;
+   font-family: 'Poppins', sans-serif;
+         }
+     </style>
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon  hidden name="logo-apple"></ion-icon>
+                            <img class="mt-2 ml-4" width="40" src="/assets/imgs/TREKKLOGO.png" alt="">
+                            <!-- <img width="20" src="/assets/imgs/TREKKLOGO.png" alt=""> -->
+                        </span>
+                        <span class="title font-semibold">Trekk & Travels</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Hotel_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bed-outline"></ion-icon>
+                        </span>
+                        <span class="title">Hotel Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Transport_voucher.html">
+                        <span class="icon">
+                            <ion-icon name="bus-outline"></ion-icon>
+                        </span>
+                        <span class="title">Transport Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Itnery.html">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Itnery</span>
+                    </a>
+                </li>
+
+                
+                <li>
+                    <a href="add_resort.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Resort</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Contacts.html">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                                                </span>
+                        <span class="title">Add Contacts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Settings.html">
+                        <span class="icon">
+                            <ion-icon name="cog-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div hidden class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!-- <div class="user">
+                    <img src="assets/imgs/customer01.jpg" alt="">
+                </div> -->
+            </div>
+
+            <!-- ======================= Cards ================== -->
+             
+
+            <div id="printableContent" class="w-full h-auto">
+
+     
+    <div  class="md:flex   mt-5 md:justify-between">                    
+        <div class="md:ml-5 md:w-1/2 mx-auto">
+
+            <button hidden onclick="window.location.href='Edit_hotel_voucher.html'" class="bg-indigo-500 ml-4 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded">
+                View Vouchers
+            </button>
+            
+            <h1 class="text-3xl md:ml-4  text-center  lg:text-left	mt-5  font-bold mb-4">Create Hotel Voucher</h1>
+            
+          
+
+
+            <!-- Hotel Bill Form -->
+            <form id="hotel-bill-form"
+                class="  	 p-4 rounded-lg   mb-4">
+                <!-- Hotel Details -->
+                <h2 class="font-bold">Hotel Details</h2>
+                <div class="mb-4">
+                    <label for="confirmation-number"   class="block">Confirmation Number:</label >
+                    <input type="text"   id="confirmation-number"    class="w-full p-2 border rounded border border-slate-700" required>
+                        <div hidden id="hotel-voucher-dropdown"  class=" absolute z-50 left-0 mt-2 w-96 bg-white rounded-md shadow-lg">
+                             
+                       <!-- The dropdown list will be dynamically populated here -->
+                   </div> 
+                    
+                </div>
+
+
+                <div class="mb-4">
+                    <label for="hotel-name" class="block">Hotel Name:</label>
+                    <div class="relative inline-block w-full text-left">
+                        <input type="text" id="hotel-name"  class="w-full p-2 border rounded border border-slate-700" placeholder="Type to search">
+                        <div id="hotel-name-dropdown" class="hidden absolute z-50 left-0 mt-2 w-full bg-white rounded-md shadow-lg">
+                            <!-- The dropdown list will be dynamically populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="hotel-address" class="block">Hotel Address:</label>
+                    <input type="text" id="hotel-address"
+                        class="w-full p-2 border rounded border border-slate-700">
+                        <p>Maximum 133 characters allowed</p>
+                </div>
+
+                <div class="mb-4">
+                    <label for="google-map-link" class="block">Google Map Link:</label>
+                    <input type="url" id="google-map-link"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <div class="mb-4">
+                    <label for="hotel-phone" class="block">Hotel Phone:</label>
+                    <input type="tel" id="hotel-phone"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <div class="mb-4">
+                    <label for="hotel-photo" class="block">Hotel Photo:</label>
+                    <img id="hotel-photo-preview"   class="w-30 h-20 border rounded bg-gray-200">
+                    <input type="file"   class="mt-4" id="photo" accept="image/*">
+                 </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+
+                <!-- Add other fields as needed -->
+                <h2 class="font-bold mb-2 text-xl">Guest Details</h2>
+
+                <div class="mb-4">
+                    <label for="guest-name" class="block">Guest Name:</label>
+                    <div class="relative inline-block w-full text-left">
+                        <input type="text" id="guest-name"
+                            class="w-full p-2 border rounded border border-slate-700" placeholder="Type to search">
+                        <div id="guest-name-dropdown"
+                            class="hidden absolute z-50 left-0 mt-2 w-full bg-white rounded-md shadow-lg">
+                            <!-- The dropdown list will be dynamically populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="guest-number" class="block">Guest Number:</label>
+                    <input type="text" id="guest-number"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <!-- Add guest citizen input under guest number -->
+                <div class="mb-4">
+                    <label for="guest-citizen" class="block">Guest Mail id:</label>
+                    <input type="text" id="guest-citizen"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <div class="mb-4">
+                    <label for="guest-number" class="block">No of Adults:</label>
+                    <input type="text" id="No-of-Adults"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <!-- Add other fields as needed -->
+                <h2 class="font-bold mb-2 text-xl	">Voucher Details</h2>
+
+                <div class="mb-4">
+                    <label for="issued-by" class="block">Issued By:</label>
+                    <input type="text" id="issued-by"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <div class="mb-4">
+                    <label for="issued-date" class="block">Issued Date:</label>
+                    <input type="date" id="issued-date"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <div class="mb-4">
+                    <label for="booked-by" class="block">Booked By:</label>
+                    <input type="text" id="booked-by"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <div class="mb-4">
+                    <label for="contact-no" class="block">Contact No:</label>
+                    <input type="tel" id="contact-no"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <div class="mb-4">
+                    <label for="mail-id" class="block">Mail ID:</label>
+                    <input type="email" id="mail-id"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <!-- Room Details Container -->
+                <div id="room-details-container" class="mb-4">
+                    <h2 class="font-bold mb-2 text-xl	">Room Details</h2>
+                    <!-- Initial set of room input fields -->
+                    <div class="room-details">
+                        <div class="mb-4">
+                            <label for="room-type"   class="block">Room Type:</label>
+                            <input type="text" class="w-full p-2 rounded border border-slate-700" id="room-type">
+                        </div>
+                        <div class="mb-4">
+                            <label for="no-of-rooms" class="block">No. of Rooms:</label>
+                            <input type="number" class="w-full p-2 border rounded border border-slate-700" id="no-of-rooms">
+                        </div>
+                        <div class="mb-4">
+                            <label for="no-of-extra-bed" class="block">No. of Extra Beds:</label>
+                            <input type="number" class="w-full p-2 border rounded border border-slate-700"
+                                id="no-of-extra-bed">
+                        </div>
+                        <div class="mb-4">
+                            <label for="child-without-bed" class="block">Child Without Bed:</label>
+                            <input type="number" class="w-full p-2 border rounded border border-slate-700"
+                                id="child-without-bed">
+                        </div>
+                        <div class="mb-4">
+                            <label for="meal-plan" class="block">Meal Plan:</label>
+                            <input type="text" class="w-full p-2 border rounded border border-slate-700"
+                                id="meal-plan">
+                        </div>
+                    </div>
+ 
+ 
+                   
+                </div>
+     
+                   <!-- Button to add more room input fields -->
+                   <button type="button" id="add-room-button"
+                   class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add Room</button>
+
+
+                   <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                             <!-- Add other fields as needed -->
+               <h2 class="font-bold">Check-in</h2>
+
+               <div class="mb-4">
+                   <label for="check-in-date" class="block">Check-In Date:</label>
+                   <input type="date" id="check-in-date" class="w-full p-2 border rounded border border-slate-700">
+               </div>
+       
+               <div class="mb-4">
+                   <label for="check-in-time" class="block">Check-In Time:</label>
+                   <input type="time" id="check-in-time" class="w-full p-2 border rounded border border-slate-700">
+               </div>
+       
+                <!-- Add other fields as needed -->
+                <h2 class="font-bold">Check-out</h2>
+       
+              
+       
+               <div class="mb-4">
+                   <label for="check-out-date" class="block">Check-Out Date:</label>
+                   <input type="date" id="check-out-date" class="w-full p-2 border rounded border border-slate-700">
+               </div>
+       
+               <div class="mb-4">
+                   <label for="check-out-time" class="block">Check-Out Time:</label>
+                   <input type="time" id="check-out-time" class="w-full p-2 border rounded border border-slate-700">
+               </div>
+
+               
+
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+
+                <div class="mb-10">
+                    <label for="notes" class="block font-medium">Notes:</label>
+                    <textarea id="notes" class="w-full p-2 border rounded border border-slate-700" rows="4"></textarea>
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <div class="mb-4">
+                    <label for="special-request" class="block font-medium">Special Request:</label>
+                    <textarea id="special-request" class="w-full p-2 border rounded border border-slate-700"
+                        rows="4"></textarea>
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <div class="mb-4">
+                    <label for="payment-info" class="block font-medium">Payment Information:</label>
+                    <textarea id="payment-info" class="w-full p-2 border rounded border border-slate-700"
+                        rows="4"></textarea>
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <!-- Arrival Details -->
+                <div class="mb-4">
+                    <label for="arrival" class="block font-medium">Arrival:</label>
+                    <select id="arrival" class="w-full p-2 border rounded border border-slate-700">
+                        <option value="By Air">By Air</option>
+                        <option value="By Road">By Road</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="ticket-no" class="block font-medium">Details :</label>
+                    <input type="text" id="ticket-no-two"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <!-- Departure Details -->
+                <div class="mb-4">
+                    <label for="departure" class="block">Departure:</label>
+                    <select id="departure" class="w-full p-2 border rounded border border-slate-700">
+                        <option value="By Air">By Air</option>
+                        <option value="By Road">By Road</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="ticket-no" class="block">Details :</label>
+                    <input type="text" id="ticket-no"
+                        class="w-full p-2 border rounded border border-slate-700">
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <!-- Terms & Condition -->
+                <div class="mb-4">
+                    <label for="terms-container" class="block">Terms & Condition:</label>
+                    <div id="terms-container" class="mb-2">
+                        <!-- The initial input field -->
+                        <input type="text"   placeholder="Enter terms & condition"
+                            class="w-full p-2 border rounded border border-slate-700 mb-2 terms-condition-input">
+                    </div>
+                    <button type="button" id="add-terms-button"
+                        class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add</button>
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <!-- Cancellation Policy -->
+                <div class="mb-4">
+                    <label for="cancellation-policy" class="block">Cancellation Policy:</label>
+                    <div id="cancellation-policy-container">
+                        <!-- Existing cancellation policy input field -->
+                        <input type="text"   class="w-full p-2 border rounded border border-slate-700 mb-2 cancellation-policy-input"
+                            placeholder="Enter cancellation policy">
+                    </div>
+                    <button type="button" id="add-cancellation-button"
+                        class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Add</button>
+                </div>
+
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+                <button type="button" id="save-button"
+                    class="bg-green-800 text-white py-2 px-4 rounded hover:bg-green-600">Save</button>
+
+
+                  
+
+              
+
+                <button type="button" id="create-bill-button" class="bg-indigo-800 text-white py-2 px-4 rounded hover:bg-indigo-600">Print</button>
+            </form>
+        </div>
+    </div>
+              
+</div>
+    <!-- =========== Scripts =========  -->
+    <script type="module" src="assets/js/Hotel_voucher.js"></script>
+    
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
