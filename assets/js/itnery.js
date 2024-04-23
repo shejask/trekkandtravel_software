@@ -1032,6 +1032,7 @@ function fetchImage(imageUrl, containerId) {
     imageElement = document.createElement("img");
     imageElement.className = "w-96";
     imageElement.src = imageUrl;
+    imgArray.push(imageElement.src);
     imageElement.alt = "Image";
     imageContainer.appendChild(imageElement);
   }
@@ -1148,6 +1149,7 @@ function saveFormData(index) {
         head: headArray,
         desc: descArray,
         img: durl,
+        printCont: imgArray,
         inclutions: inclutions,
         date: date,
       },
@@ -1177,6 +1179,7 @@ function saveFormData(index) {
 
             // Save the image URL to the database
             update(newEntryRef, { imageUrl: downloadURL });
+            imgArray.push(downloadURL);
 
             console.log(`${downloadURL}${[index]}`);
           })
@@ -1255,9 +1258,20 @@ function getPrintableContent() {
 document.getElementById("printButton").addEventListener("click", function () {
   printForm();
 });
+// obj = [
+//   {
+//     duration: printDuration,
+//     head: headArray,
+//     desc: descArray,
+//     img: imgArray,
+//     inclutions: inclutions,
+//     date: date,
+//   },
+// ];
 
 // Function to print the form
 function printForm() {
+  console.log("button clicked");
   // Get values from form elements
   const tourId = document.getElementById("tourId").value;
   const travelDate = document.getElementById("traveldate").value;
@@ -1562,7 +1576,11 @@ function printForm() {
                          <div class="w-1/3 h-32 bg-black rounded-2xl">
                          <img
                                class="w-full h-full object-cover rounded-2xl"
-                               src="${items.img[index]}"
+                               src="${
+                                 items.img[index]
+                                   ? items.img[index]
+                                   : items.printCont[index]
+                               }"
                                alt=""
                              />
                            </div>
