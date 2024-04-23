@@ -1,0 +1,54 @@
+body{
+  overflow: hidden; /* Hide the main body scroll bar */
+}
+canvas { display: block; margin: 2em; }
+
+.bg-canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  
+}
+
+body {
+  background-image: linear-gradient(to top, lighten(#076eff,20%) 40%, #003580 80%);
+  background-size: cover;
+  width: 400vw;
+  height: 400vh;
+}
+
+ 
+#movingImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveImage 2s ease-in-out forwards;
+}
+
+#replacementImage {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@keyframes moveImage {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+
+
+ 
