@@ -1680,7 +1680,7 @@ function printForm() {
           <div class="mt-5 px-5 flex flex-col gap-3">
             <div class="flex flex-col gap-1">
               <h1 class="text-xl font-semibold">Tour Inclusions</h1>
-              <h1 • Accommodation at mentioned hotels </h1>
+              <h1> • Accommodation at mentioned hotels </h1>
                 <h1> • ${applicableTaxes}</h1>
                 <h1> • ${transfersSightseeing}</h1>
                 <h1> • ${driverAllowances}</h1>
