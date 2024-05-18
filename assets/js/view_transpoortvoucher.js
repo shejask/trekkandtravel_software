@@ -376,6 +376,8 @@ printButton.addEventListener('click', () => {
 
       // Close the document for writing
       printWindow.document.close();
+                  printWindow.print();
+
 
       // Listen for the onload event to ensure content is fully loaded before printing
       // Print the page
